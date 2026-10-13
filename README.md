@@ -55,7 +55,7 @@ Nesneye Yönelik Programlama (NYP) dersi kapsamında geliştirilmiş, Java ile *
 
 1. Depoyu klonlayın veya **File → New → Project from Version Control** ile açın:
    ```bash
-   git clone https://github.com/<kullanici-adi>/ozgecmisim.git
+   git clone https://github.com/Mrv-bilgic/ozgecmisim.git
    ```
 2. IntelliJ projeyi **Maven projesi** olarak tanır ve PDFBox bağımlılığını otomatik indirir.
 3. `src/main/java/org/ozgecmis/Main.java` dosyasını açıp `main` metodunun yanındaki **▶ Run** düğmesine basın.
@@ -160,7 +160,7 @@ classDiagram
 
     BelgeOlusturucu <|.. OzgecmisPdfOlusturucu
     OzgecmisPdfOlusturucu ..> Ozgecmis : kullanır
-    Ozgecmis +-- Builder
+    Ozgecmis ..> Builder
     Ozgecmis *-- Kisi
     Kisi *-- IletisimBilgisi
     Ozgecmis o-- IsDeneyimi
@@ -168,7 +168,7 @@ classDiagram
     Ozgecmis o-- Yetenek
     ZamanAralikliKayit <|-- IsDeneyimi
     ZamanAralikliKayit <|-- Egitim
-    Yetenek +-- Seviye
+    Yetenek --> Seviye
 ```
 
 ## Kullanılan Bileşenler ve Nesneler
